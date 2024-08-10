@@ -1,0 +1,3 @@
+#!/bin/bash
+
+docker run --name server -v $(pwd):/app/ --net node-network --memory="16G" -d node bash -c 'cd app && node index.mjs'

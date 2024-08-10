@@ -1,0 +1,6 @@
+#!/bin/bash
+
+for i in $(seq 1 $1); do
+	docker run --name client-$i -v $(pwd):/app/ --net node-network -d node bash -c 'cd app && node client.mjs'
+	sleep 10
+done
